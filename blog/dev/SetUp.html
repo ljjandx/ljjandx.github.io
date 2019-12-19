@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress博客搭建笔记（一）简单上手 # | ljj&#39;s notes</title>
+    <meta name="description" content="ljj的博客">
+    <link rel="icon" href="/img/logo.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.f080858f.css" as="style"><link rel="preload" href="/assets/js/app.b6fb6e55.js" as="script"><link rel="preload" href="/assets/js/2.99986928.js" as="script"><link rel="preload" href="/assets/js/11.238f6ccf.js" as="script"><link rel="prefetch" href="/assets/js/10.5f99b7d3.js"><link rel="prefetch" href="/assets/js/12.f42d0714.js"><link rel="prefetch" href="/assets/js/13.7c3e1a09.js"><link rel="prefetch" href="/assets/js/3.985abf58.js"><link rel="prefetch" href="/assets/js/4.65eaea2f.js"><link rel="prefetch" href="/assets/js/5.70a3526a.js"><link rel="prefetch" href="/assets/js/6.b3e5e9c6.js"><link rel="prefetch" href="/assets/js/7.eeb9a7d4.js"><link rel="prefetch" href="/assets/js/8.b4235b7b.js"><link rel="prefetch" href="/assets/js/9.717d7acb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f080858f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">ljj's notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/dev/SetUp.html" class="active sidebar-link">搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/dev/SetUp.html#_1-安装程序-node-js-或者-yarn" class="sidebar-link">1.安装程序 node.js 或者 Yarn</a></li><li class="sidebar-sub-header"><a href="/blog/dev/SetUp.html#_2-博客框架搭建" class="sidebar-link">2.博客框架搭建</a></li><li class="sidebar-sub-header"><a href="/blog/dev/SetUp.html#_3-config-js配置" class="sidebar-link">3. config.js配置</a></li><li class="sidebar-sub-header"><a href="/blog/dev/SetUp.html#_4-项目启动、打包、发布" class="sidebar-link">4. 项目启动、打包、发布</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress博客搭建笔记（一）简单上手"><a href="#vuepress博客搭建笔记（一）简单上手" class="header-anchor">#</a> VuePress博客搭建笔记（一）简单上手</h1> <p></p><div class="table-of-contents"><ul><li><a href="#_1-安装程序-node-js-或者-yarn">1.安装程序 node.js 或者 Yarn</a></li><li><a href="#_2-博客框架搭建">2.博客框架搭建</a></li><li><a href="#_3-config-js配置">3. config.js配置</a></li><li><a href="#_4-项目启动、打包、发布">4. 项目启动、打包、发布</a></li></ul></div><p></p> <p>参考连接：</p> <p>https://www.vuepress.cn/guide/</p> <p>https://segmentfault.com/a/1190000017890986</p> <h2 id="_1-安装程序-node-js-或者-yarn"><a href="#_1-安装程序-node-js-或者-yarn" class="header-anchor">#</a> 1.安装程序 node.js 或者 Yarn</h2> <p>VuePress支持使用Yarn和npm来安装，Node.js版本需要&gt;=8才可以。</p> <h2 id="_2-博客框架搭建"><a href="#_2-博客框架搭建" class="header-anchor">#</a> 2.博客框架搭建</h2> <p>全局安装VuePress</p> <div class="language-node line-numbers-mode"><pre class="language-text"><code>yarn global add vuepress # 或者：npm install -g vuepress
+
+## 或者也可以在已存在的项目中开发，将 VuePress 作为一个本地依赖安装，
+## 上下两条选择一个即可
+
+## yarn add -D vuepress # 或者：npm install -D vuepress
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>创建新项目目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir blog
+cd blog
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>初始化项目</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yarn init -y # 或者 npm init -y
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>同级新建docs文件夹，新建 README.md 文件，作为首页入口。</p> <p>接着，在 package.json 里加一些脚本:</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;blog&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;version&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;main&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;license&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;scripts&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;dev&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 本地启动项目</span>
+    <span class="token string">&quot;build&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;vuepress build docs&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 本地打包项目，默认打包到 docs/.vuepress/dist 目录</span>
+    <span class="token string">&quot;deploy&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;bash deploy.sh&quot;</span>  <span class="token comment">// 调用部署脚本，见./deploy.sh，部署到github</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;repository&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;/vuepress&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;author&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;devDependencies&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;vuepress&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^1.0.0-alpha.31&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;@vuepress/plugin-back-to-top&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^1.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;@vuepress/plugin-medium-zoom&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^1.0.0-alpha.32&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>package.json同级新建 deploy.sh 文件，内容如下：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token shebang important">#!/usr/bin/env sh</span>
+
+<span class="token comment"># 确保脚本抛出遇到的错误</span>
+<span class="token builtin class-name">set</span> -e
+
+<span class="token comment"># 生成静态文件</span>
+<span class="token function">npm</span> run build
+
+<span class="token comment"># 进入生成的文件夹</span>
+<span class="token builtin class-name">cd</span> docs/.vuepress/dist
+
+<span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io  填写你刚刚创建的仓库地址</span>
+<span class="token function">git</span> push -f https://github.com/ljjandx/ljjandx.github.io.git master
+
+<span class="token builtin class-name">cd</span> -
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>同级新建.vuepress文件夹，其中新建config.js文件和public文件夹</p> <p>最后的目录：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>project
+├─── docs
+│   ├── README.md
+│   └── .vuepress
+│       ├── dist
+│       ├── public
+│       └── config.js
+└── package.json
+└── deploy.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>不管使用哪种方式，最终的项目结构应该和上面一样。</p> <ul><li>docs文件夹是你的根目录，也是vuepress要去解析的文件夹，</li> <li>docs下的README.md可以理解为首页页面。</li> <li>docs下的.vuepress是一些配置文件，这里可以存放图片等静态资源，一些主题配置，自定义组件等等</li></ul> <p>至此，一个基于docs文件夹下的README.md文件 生成的页面 就 制作完成了。</p> <h2 id="_3-config-js配置"><a href="#_3-config-js配置" class="header-anchor">#</a> 3. config.js配置</h2> <p>.vuepress/config.js文件配置：<a href="https://www.vuepress.cn/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener noreferrer">https://www.vuepress.cn/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>默认主题配置：https://www.vuepress.cn/theme/default-theme-config.html</p> <p><strong>注意事项</strong></p> <ul><li>和<strong>图标/图片</strong>等静态资源相关的 其 '/' 默认指向的是 <strong>docs/.vuepress/public/</strong></li> <li>和<strong>侧边栏/导航栏</strong>相关的地址配置 其 '/' 默认指向的是 <strong>docs/</strong></li> <li>侧边栏/导航栏指向.md文件的需要<strong>先建立相关.md文件</strong>，不然会报404或者页面空白</li></ul> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">&quot;ljj's notes&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 页签标题</span>
+  description<span class="token punctuation">:</span> <span class="token string">'ljj的博客'</span><span class="token punctuation">,</span> <span class="token comment">// meta 中的描述文字，意义不大，SEO用</span>
+  <span class="token comment">// 注入到当前页面的 HTML &lt;head&gt; 中的标签</span>
+  head<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 增加一个自定义的 favicon(网页标签的图标)</span>
+    <span class="token comment">// 这里的 '/' 指向 docs/.vuepress/public 文件目录 </span>
+    <span class="token comment">// 即 docs/.vuepress/public/img/logo.ico</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token string">'/img/logo.ico'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  base<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">// 这是部署到github相关的配置</span>
+  markdown<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    lineNumbers<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token comment">// 代码块显示行号</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// 配置主题</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    sidebarDepth<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token comment">// 将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。</span>
+    lastUpdated<span class="token punctuation">:</span> <span class="token string">'Last Updated'</span> <span class="token punctuation">,</span><span class="token comment">// 文档更新时间：每个文件git最后提交的时间,</span>
+    <span class="token comment">// 顶部导航栏</span>
+    nav<span class="token punctuation">:</span><span class="token punctuation">[</span>
+      
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">// 侧边栏菜单( 一个模块对应一个菜单形式 )</span>
+    sidebar<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="_4-项目启动、打包、发布"><a href="#_4-项目启动、打包、发布" class="header-anchor">#</a> 4. 项目启动、打包、发布</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">yarn</span> dev 或 <span class="token function">npm</span> run dev 本地启动项目
+<span class="token function">yarn</span> build 或 <span class="token function">npm</span> run build 本地打包项目
+<span class="token function">yarn</span> deploy 或 <span class="token function">npm</span> run deploy 将项目发布到github
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/19/2019, 1:27:33 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b6fb6e55.js" defer></script><script src="/assets/js/2.99986928.js" defer></script><script src="/assets/js/11.238f6ccf.js" defer></script>
+  </body>
+</html>
